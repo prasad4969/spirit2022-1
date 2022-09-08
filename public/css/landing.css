@@ -47,9 +47,9 @@ body {
     margin-top: 3% !important;
     color: white !important;
   }
-  /* .oki:hover {
-    background-color: azure;
-  } */
+  .oki:hover {
+    background-color: #503187 !important ;
+  }
   .header {
     position: relative;
     background-image: url("../images/navimg.png");
