@@ -176,9 +176,9 @@ app.get("/campus_amb_register", async (req, res) => {
   if (session.userid) {
     const email = session.userid;
     const user = await stuff_user.model.findOne({ email }).lean();
-    res.render("authentication/ca-register", { user: user, logged_in: true });
+    res.render("authentication/ca-register", { user: user, logged_in: true, google_id:process.env.CLIENT_ID });
   } else {
-    res.render("authentication/login", { logged_in: false, loginmsg: true });
+    res.render("authentication/login", { logged_in: false, loginmsg: true, google_id:process.env.CLIENT_ID });
   }
 });
 
