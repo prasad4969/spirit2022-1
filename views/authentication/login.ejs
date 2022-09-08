@@ -508,11 +508,11 @@
                 Login with Google
               </button>
             </div>
-            <div class="button">
+            <!-- <div class="button">
               <button type="button" id="button2" class="btn btn-primary btn-lg btn-block">
                 Login with Outlook
               </button>
-            </div>
+            </div> -->
           </div>
           <a href="register" class="myanchortag">Dont have an account? Create one here</a>
            <!-- <button type="button" id="button1">Login</button>
@@ -615,6 +615,7 @@
               }
           }
           
+  var googleid = "<%= google_id %>";
         
               
 
@@ -624,7 +625,7 @@
               gapi.load('auth2', function(){
               // Retrieve the singleton for the GoogleAuth library and set up the client.
               auth2 = gapi.auth2.init({
-                  client_id: '3577006987-f2e34fou4ef4avubvd7lkea870ghj3fq.apps.googleusercontent.com',
+                  client_id: googleid,
                   cookiepolicy: 'single_host_origin',
                   plugin_name:"chat27"
                   // Request scopes in addition to 'profile' and 'email'

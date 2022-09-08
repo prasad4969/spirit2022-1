@@ -73,14 +73,20 @@ app.get("/", (req, res) => {
 //Authentication
 app.get("/register", (req, res) => {
   if (!req.session.userid) {
-    res.render("authentication/register", { logged_in: false });
+    res.render("authentication/register",
+     { logged_in: false,
+      google_id:process.env.CLIENT_ID
+     });
   } else {
     res.redirect("/");
   }
 });
 app.get("/login", (req, res) => {
   if (!req.session.userid) {
-    res.render("authentication/login", { logged_in: false });
+    res.render("authentication/login",
+     { logged_in: false,
+      google_id:process.env.CLIENT_ID
+     });
   } else {
     res.redirect("/");
   }
