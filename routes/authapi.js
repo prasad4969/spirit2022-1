@@ -6,6 +6,8 @@ var nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
+const env=require("dotenv").config();
+
 
 var session;
 //jwt
