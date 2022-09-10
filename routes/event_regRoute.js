@@ -74,7 +74,28 @@ app.post("/post/:event_name/:id", urlencodedParser ,async(req, res) => {
 	let name_of_event = req.body.event_name;
 	var counter = 0;
 
-	if( name_of_event === "shutterbug" || name_of_event === "marathon" || name_of_event === "fitness" || name_of_event === "chess" || name_of_event === "fantasy" || name_of_event === "cricket_workshop" || name_of_event === "treasure_hunt"){
+	if( name_of_event === "Cricket" ||
+	    name_of_event === "Football" ||
+	    name_of_event === "Hockey" || 
+		name_of_event === "Weightlifting" || 
+		name_of_event === "Chess" || 
+		name_of_event === "Kho-Kho" || 
+		name_of_event === "Aquatics-m" || 
+		name_of_event === "Aquatics-w" || 
+		name_of_event === "Athletics-w" || 
+		name_of_event === "Athletics-m" || 
+		name_of_event === "Volleyball-w" || 
+		name_of_event === "Volleyball-m" || 
+		name_of_event === "Basketball-w" || 
+		name_of_event === "Basketball-m" || 
+		name_of_event === "TT-m"  || 
+		name_of_event === "TT-w"  || 
+		name_of_event === "Tennis-w"  || 
+		name_of_event === "Tennis-m"  || 
+		name_of_event === "Badminton-m" || 
+		name_of_event === "Badminton-w" || 
+		name_of_event === "Yoga-w" || 
+		name_of_event === "Yoga-m"){
 
 		const data = await stuff_user.model.findOne({ email }).then(
 			(data)=>{
@@ -92,19 +113,23 @@ app.post("/post/:event_name/:id", urlencodedParser ,async(req, res) => {
 			var newEntry = await stuff.event.findOne({ event_name: name_of_event }).then(
 			(newEntry)=>{
 				let j = newEntry.email_address.length;
+
 				if(req.body.contact_number){
 					newEntry.contact_number[j] =  req.body.contact_number;
 				}
-				if(req.body.whatsapp_number){
-					newEntry.whatsapp_number[j] =  req.body.whatsapp_number;
-				}
+				// if(req.body.whatsapp_number){
+				// 	newEntry.whatsapp_number[j] =  req.body.whatsapp_number;
+				// }
 				newEntry.email_address[j] = req.body.email_address;
 				newEntry.full_name[j] = req.body.full_name;
 				newEntry.college[j] = req.body.college;
+				newEntry.team_cnt[j] = req.body.team_cnt;
+				newEntry.team_leader[j] = req.body.team_leader;
+				newEntry.accomodation[j] = req.body.accom;
 				newEntry.user_object_id[j] = req.params.id;
-				if(req.body.chess_username){
-					newEntry.chess_username[j] = req.body.chess_username;
-				}
+				// if(req.body.chess_username){
+				// 	newEntry.chess_username[j] = req.body.chess_username;
+				// }
 				newEntry.save(async function(error, data){			
 					if(error){
 						if (error.code === 11000) {

@@ -23,6 +23,7 @@ var session;
 app.use(express.static("public"));
 app.locals.stuff_event = stuff_event;
 
+
 mongoose.connect(
   process.env.MONG,
   {
@@ -110,7 +111,7 @@ app.get("/events/register/:name", async (req, res) => {
   if (req.session.userid) {
     const email = req.session.userid;
     const user = await stuff_user.model.findOne({ email }).lean();
-    res.render("events/event_reg", { user: user, name: req.params.name });
+    res.render("events/event_reg", { user: user, name: req.params.name, logged_in:true });
   } else {
     res.redirect("/login");
   }

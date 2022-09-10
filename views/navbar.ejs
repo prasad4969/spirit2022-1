@@ -13,7 +13,7 @@
         <header class="header">
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
-                  <div class="jojo"><a class="navbar-brand spirit-img" href="/"><img class="img-fluid" src="images/nav_spirit.svg">
+                  <div class="jojo"><a class="navbar-brand spirit-img" href="/"><img class="img-fluid" src="/images/nav_spirit.svg">
                   
                   </a></div>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,24 +22,27 @@
                   <div class="collapse navbar-collapse justify-content-around " id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto list">
                       <li class="nav-item">
-                        <a class="nav-link margin" aria-current="page" href="events">Events</a>
+                        <a class="nav-link margin" aria-current="page" href="/events">Events</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link margin" href="sponsors">Sponsors</a>
+                        <a class="nav-link margin" href="/sponsors">Sponsors</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link margin" href="aboutus">About Us</a>
+                        <a class="nav-link margin" href="/aboutus">About Us</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link margin" href="campus_amb_register">Join Team</a>
+                        <a class="nav-link margin" target="_blank" href="/pdf/rulebook.pdf">Rulebook</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link margin" href="/campus_amb_register">CA Programme</a>
                       </li>
                       <%if (logged_in){%>
                         <li class="nav-item">
-                          <a class="nav-link" href="profile"><ul class="navbar-nav mb-lg-1" href="register"><button class="btn btn-light" >Profile</button></ul></a>
+                          <a class="nav-link" href="/profile"><ul class="navbar-nav mb-lg-1" href="register"><button class="btn btn-light" >Profile</button></ul></a>
                         </li>
               <%}else{%>
                 <li class="nav-item">
-                  <a class="nav-link" href="register"><ul class="navbar-nav mb-lg-1" href="register"><button class="btn btn-light" >Register</button></ul></a>
+                  <a class="nav-link" href="/register"><ul class="navbar-nav mb-lg-1" href="register"><button class="btn btn-light" >Register</button></ul></a>
                 </li>
               <%}%>
                       

@@ -8,22 +8,25 @@
     <title>Spirit 2021 | Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        
-    </head>
-    
-    <body>
-        <%- include('../navbar') -%>
+
+</head>
+
+<body>
+    <%- include('../navbar') -%>
         <link rel="stylesheet" type="text/css" href="css/dashboard1.css" />
         <div style="padding-left: 8%;padding-right: 8%;">
             <div class="screenclass row py-5">
                 <div class="col-sm-12 col-md-12 col-lg-6 hello">
                     <div class="cont2">
                         <div>
-                            <img class="mx-2" style="border-radius: 12px; width: 30%; height: 30%;"
+                            <img class="mx-2" style="border-radius: 12px; width: 27%; height: 30%;"
                                 src="images/dash-img.png" />
-                            <img class="mx-2" src="images/dash-pattern.svg" style="width: 57%; height: 30%;" alt="">
+                            <img class="mx-2" src="images/dash-pattern.svg" style="width: 53%; height: 30%;" alt="">
                         </div>
-                        <h1>Hello <%=user.username%>!</h1>
+                        <h2>Hello <%=user.username%>!</h2>
+                        <%if(user.isCampusAmb){ %>
+                            <p style="width: 75%;">Your Campus Ambassador id is <%= user.campusAmbId %> </p>  
+                        <% } %>
                         <p>
                             It's good to see you again.
                         </p>
@@ -63,11 +66,11 @@
                         <div class="bttns edit_button_register">
                             <div class="button">
                                 <a style="text-decoration: none; color: #FFFFFF; cursor: pointer;"
-                                href="profile/update/<%=user._id%>">
-                                <button type="button" id="button1">
+                                    href="profile/update/<%=user._id%>">
+                                    <button type="button" id="button1">
                                         Edit
                                     </button>
-                                    </a>
+                                </a>
                             </div>
                         </div>
 
@@ -90,16 +93,16 @@
                 </div>
 
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <p class="registered_event ">Registered Event</p>
+                    <p class="registered_event ">Registered Events</p>
                     <div class="myclass1">
 
                         <div class="reg_events">
                             <% var isIpladded=false; var isShutterbugadded=false; if(user.storerandompassword){
                                 isIpladded=true;%>
-                                <!-- <img class="event_img" src="images/Ipl.png"> -->
+                                <!-- <img class="event_img" src="images/event_pics/Ipl.png"> -->
                                 <div class="card my-4 reg-cards">
                                     <div class="px-4 py-4">
-                                        <img src="images/Ipl.png" />
+                                        <img src="images/event_pics/Ipl.png" />
                                     </div>
                                     <div class="card-body container">
                                         <h5 class="row card-title mb-2">
@@ -121,20 +124,55 @@
                                         var img_src = '';
                                         var img_name = '';
                                         for (var i=0; i<user.events_registered.length; i++){
-                                            switch(user.events_registered[i]){ case 'shutterbug' : {
-                                            img_src='images/ShutterBug.jpg' ; img_name='ShutterBug' ;
-                                            isShutterbugadded=true; break; } case 'Shutterbug' : {
-                                            img_src='images/ShutterBug.jpg' ; img_name='ShutterBug' ;
-                                            isShutterbugadded=true; break; } case 'marathon' : {
-                                            img_src='images/Marathon.jpg' ; img_name='Marathon' ; break; }
-                                            case 'fitness' : { img_src='images/Fitness.png' ; img_name='Fitness' ;
-                                            break; } case 'fantasy' : { img_src='images/CricketFantasy.jpg' ;
-                                            img_name='Fantasy' ; break; } case 'treasure_hunt' : {
-                                            img_src='images/Treasure.jpg' ; img_name='Treasure Hunt' ; break; }
-                                            case 'cricket_workshop' : { img_src='images/Cricketworkshop.jpg' ;
-                                            img_name='Cricketworkshop' ; break; } case 'chess' : {
-                                            img_src='images/Chess.jpeg' ; img_name='Chess' ; break; } case 'Ipl Auction'
-                                            : if(isIpladded==false){ img_src='images/Ipl.png' ; img_name='IPL Auction' }
+                                            switch(user.events_registered[i]){
+                                            case 'Basketball-m' : {
+                                            img_src='images/event_pics/Basketball.png' ; img_name='Basketball-m' ;isShutterbugadded=true; break; }
+                                            case 'Athletics-m' : {
+                                                img_src='images/event_pics/Athletics.png' ; img_name='Athletics-m' ;isShutterbugadded=true; break; }
+                                            case 'Badminton-m' : {
+                                                img_src='images/event_pics/Badminton.png' ; img_name='Badminton-m' ; break; }
+                                            case 'Cricket' : {
+                                                img_src='images/event_pics/Cricket.png' ; img_name='Cricket' ;break; }
+                                            case 'Football' : {
+                                                img_src='images/event_pics/Football.png' ;img_name='Football' ; break; }
+                                            case 'Hockey' : {
+                                            img_src='images/event_pics/Hockey.png' ; img_name='Hockey' ; break; }
+                                            case 'Weightlifting' : {
+                                                 img_src='images/event_pics/Weightlifting.png' ;
+                                            img_name='Weightlifting' ; break; }
+                                             case 'Chess' : {
+                                            img_src='images/event_pics/Chess.png' ; img_name='Chess' ; break; }
+                                            case 'Yoga-m' : {
+                                                img_src='images/event_pics/Yoga.png' ; img_name='Yoga-m' ; break; }
+                                            case 'Yoga-w' : {
+                                                img_src='images/event_pics/Yoga.png' ; img_name='Yoga-w' ; break; }
+                                            case 'Kho-Kho' : {
+                                                img_src='images/event_pics/Kho-Kho.png' ; img_name='Kho-Kho' ; break; }
+                                            case 'Aquatics-m' : {
+                                                img_src='images/event_pics/Aquatics.png' ; img_name='Aquatics-m' ; break; }
+                                            case 'Aquatics-w' : {
+                                                img_src='images/event_pics/Aquatics.png' ; img_name='Aquatics-w' ; break; }
+                                            case 'Athletics-w' : {
+                                                img_src='images/event_pics/Athletics.png' ; img_name='Athletics-w' ; break; }
+                                            case 'Volleyball-w' : {
+                                                img_src='images/event_pics/Volleyball.png' ; img_name='Volleyball-w' ; break; }
+                                            case 'Volleyball-m' : {
+                                                img_src='images/event_pics/Volleyball.png' ; img_name='Volleyball-m' ; break; }
+                                            case 'Basketball-w' : {
+                                                img_src='images/event_pics/Basketball.png' ; img_name='Basketball-w' ; break; }
+                                            case 'TT-m' : {
+                                                img_src='images/event_pics/TT.png' ; img_name='TT-m' ; break; }
+                                            case 'TT-w' : {
+                                                img_src='images/event_pics/TT.png' ; img_name='TT-w' ; break; }
+                                            case 'Tennis-m' : {
+                                                img_src='images/event_pics/Tennis.png' ; img_name='Tennis-m' ; break; }
+                                            case 'Tennis-w' : {
+                                                img_src='images/event_pics/Tennis.png' ; img_name='Tennis-w' ; break; }
+                                            case 'Badminton-w' : {
+                                                img_src='images/event_pics/Badminton.png' ; img_name='Badminton-w' ; break; }
+
+                                             case 'Ipl Auction'
+                                            : if(isIpladded==false){ img_src='images/event_pics/Ipl.png' ; img_name='IPL Auction' }
                                             break; } if(img_src !='' ){ %>
                                             <!-- <a href="/events" class="event_img">
                                         <img width="100%" src=<%= img_src %> alt="event_poster">
@@ -178,7 +216,7 @@
 
                         <!-- <div class="card my-4 reg-cards">
                         <div class="px-4 py-4">
-                            <img src="images/image 13.png" />
+                            <img src="images/event_pics/image 13.png" />
                         </div>
                         <div class="card-body container">
                             <h5 class="row card-title mb-2">
@@ -195,7 +233,7 @@
 
                         <!-- <div class="card my-4 reg-cards">
                         <div class="px-4 py-4">
-                            <img src="images/image 13.png" />
+                            <img src="images/event_pics/image 13.png" />
                         </div>
                         <div class="card-body container">
                             <h5 class="row card-title mb-2">
@@ -212,7 +250,7 @@
 
                     <div class="card my-4 reg-cards">
                         <div class="px-4 py-4">
-                            <img src="images/image 13.png" />
+                            <img src="images/event_pics/image 13.png" />
                         </div>
                         <div class="card-body container">
                             <h5 class="row card-title mb-2">
@@ -229,7 +267,7 @@
 
                     <div class="card my-4 reg-cards">
                         <div class="px-4 py-4">
-                            <img src="images/image 13.png" />
+                            <img src="images/event_pics/image 13.png" />
                         </div>
                         <div class="card-body container">
                             <h5 class="row card-title mb-2">
@@ -246,7 +284,7 @@
 
                     <div class="card my-4 reg-cards">
                         <div class="px-4 py-4">
-                            <img src="images/image 13.png" />
+                            <img src="images/event_pics/image 13.png" />
                         </div>
                         <div class="card-body container">
                             <h5 class="row card-title mb-2">
@@ -263,7 +301,7 @@
 
                     <div class="card my-4 reg-cards">
                         <div class="px-4 py-4">
-                            <img src="images/image 13.png" />
+                            <img src="images/event_pics/image 13.png" />
                         </div>
                         <div class="card-body container">
                             <h5 class="row card-title mb-2">

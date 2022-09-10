@@ -16,16 +16,16 @@
         margin-bottom: 15%;
         line-height: 0%;
       }
-      .cont2 > h1 {
+      .cont2 > h2 {
         margin: 0%;
         margin-left: 2%;
         /* width: 331px; */
-        height: 59px;
+        height: 50px;
         font-family: "Outfit";
         font-style: normal;
         font-weight: 600;
-        font-size: 38.6626px;
-        line-height: 59px;
+        font-size: 30px;
+        line-height: 55px;
         text-align: left;
         color: #282938;
       }
