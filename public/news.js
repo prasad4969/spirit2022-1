@@ -7,9 +7,9 @@ var newsDataArr=[];
 
 //apis
 
-const API_KEY ="3314d224194e4878ace3b0d512e1e989";
+// const API_KEY ="3314d224194e4878ace3b0d512e1e989";
 
-const SPORTS_NEWS=("https://newsapi.org/v2/top-headlines?country=in&category=Sports&pageSize=6&apiKey=3314d224194e4878ace3b0d512e1e989")
+const SPORTS_NEWS=("http://localhost:3000/newsapi")
 
 window.onload=function(){
     newsType.innerHTML="";

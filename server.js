@@ -6,6 +6,7 @@ const authapi = require("./routes/authapi");
 const profileroute = require("./routes/profileroute");
 const event_regRoute = require("./routes/event_regRoute");
 const shutterbug = require("./routes/shutterbug");
+const newsapi = require("./routes/newsapi");
 const iplauction = require("./routes/iplauction");
 const treasurehunt = require("./routes/treasurehunt");
 const cookieParser = require("cookie-parser");
@@ -184,6 +185,7 @@ app.get("/campus_amb_register", async (req, res) => {
 });
 
 //APIS
+app.use("/newsapi",newsapi);
 app.use("/authapi", authapi);
 app.use("/iplauction", iplauction);
 app.use("/treasurehunt", treasurehunt);
