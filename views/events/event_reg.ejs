@@ -97,29 +97,46 @@ height: 95% "  >
           <div class="cardd">
             <h6>Full Name</h6>
              
-            <input type="text" name="email" style="font-size: 15px;font-weight: 400;" id="name"
+            <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="name"
                      value=<%=user.username%> class="TextBox">
             
           </div>
           <div class="cardd">
             <h6>School/College</h6>
-            <input type="text" name="email" style="font-size: 15px;font-weight: 400;" id="college"
+            <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="college"
                      value=<%=user.collegename%> class="TextBox">
              
           </div>
           <div class="cardd">
             <h6>Email Address</h6>
-            <input type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
+            <input required type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
                      value=<%=user.email%> class="TextBox">
              
           </div>
           <div class="cardd">
             <h6>Contact Number</h6>
-                     <input type="text" name="password" style="font-size: 15px;font-weight: 400;" id="phone"
-                     value=<%=user.phno%> class="TextBox">
+                     <input required type="text" name="password" style="font-size: 15px;font-weight: 400;" id="phone"
+                     value=<%=user.phno%> class="TextBox" >
              
           </div>
           <div class="cardd">
+            <h6>Team Leader Name</h6>
+             
+            <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="leader"
+                     value="" class="TextBox">
+            
+          </div>
+          <div class="cardd">
+            <h6>Team Count</h6>
+                     <input required type="number" name="password" style="font-size: 15px;font-weight: 400;" id="cnt"
+                     value="" class="TextBox">
+             
+          </div>
+
+          <input type="checkbox" id="accom" name="accom" value="accom">
+            <label for="accom">Do you want accomodation?</label><br>
+          <div class="cardd">
+
             <h6>Campus Ambassador ID(optional)</h6>
                      <input type="text" name="password" style="font-size: 15px;font-weight: 400;" id="cmpid"
                      value="" class="TextBox">
@@ -158,11 +175,19 @@ height: 95% "  >
                     var email_address = document.getElementById('mail').value
                     var college = document.getElementById('college').value
                     var contact_number = document.getElementById('phone').value
+                    var team_leader = document.getElementById('leader').value
+                    var team_cnt = document.getElementById('cnt').value
+				            if(document.getElementById('accom').checked)
+                    {var accom = true;}
+                    else{ var accom = false; }
                     var amb_id = document.getElementById('cmpid').value
                     console.log(full_name);
                     console.log(email_address);
                     console.log(college);
                     console.log(contact_number);
+                    console.log(team_cnt);
+                    console.log(team_leader);
+                    console.log(accom);
                     console.log(amb_id);
                     var result = await fetch(`/events/event_registration/post/${event_name}/${id}`, {
                         method: 'POST',
@@ -170,13 +195,15 @@ height: 95% "  >
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            full_name,event_name,email_address,college,contact_number,amb_id
+                            full_name,event_name,email_address,college,contact_number,amb_id,team_leader,team_cnt,accom
                         })
                     }).then((res) => res.json())
     
                     if (result.status === 'ok') {
+                      window.location.replace(`/events/event_registration/success`);
                         alert('Success')
                     } else {
+				              window.location.replace(`/`);
                         alert(result.error)
                     }
             }

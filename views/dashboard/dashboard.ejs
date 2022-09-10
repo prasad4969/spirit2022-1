@@ -8,11 +8,11 @@
     <title>Spirit 2021 | Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        
-    </head>
-    
-    <body>
-        <%- include('../navbar') -%>
+
+</head>
+
+<body>
+    <%- include('../navbar') -%>
         <link rel="stylesheet" type="text/css" href="css/dashboard1.css" />
         <div style="padding-left: 8%;padding-right: 8%;">
             <div class="screenclass row py-5">
@@ -63,11 +63,11 @@
                         <div class="bttns edit_button_register">
                             <div class="button">
                                 <a style="text-decoration: none; color: #FFFFFF; cursor: pointer;"
-                                href="profile/update/<%=user._id%>">
-                                <button type="button" id="button1">
+                                    href="profile/update/<%=user._id%>">
+                                    <button type="button" id="button1">
                                         Edit
                                     </button>
-                                    </a>
+                                </a>
                             </div>
                         </div>
 
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <p class="registered_event ">Registered Event</p>
+                    <p class="registered_event ">Registered Events</p>
                     <div class="myclass1">
 
                         <div class="reg_events">
@@ -121,19 +121,25 @@
                                         var img_src = '';
                                         var img_name = '';
                                         for (var i=0; i<user.events_registered.length; i++){
-                                            switch(user.events_registered[i]){ case 'shutterbug' : {
-                                            img_src='images/ShutterBug.jpg' ; img_name='ShutterBug' ;
-                                            isShutterbugadded=true; break; } case 'Shutterbug' : {
-                                            img_src='images/ShutterBug.jpg' ; img_name='ShutterBug' ;
-                                            isShutterbugadded=true; break; } case 'marathon' : {
-                                            img_src='images/Marathon.jpg' ; img_name='Marathon' ; break; }
-                                            case 'fitness' : { img_src='images/Fitness.png' ; img_name='Fitness' ;
-                                            break; } case 'fantasy' : { img_src='images/CricketFantasy.jpg' ;
-                                            img_name='Fantasy' ; break; } case 'treasure_hunt' : {
+                                            switch(user.events_registered[i]){
+                                            case 'cricket' : {
+                                            img_src='images/Cricket.jpg' ; img_name='cricket' ;isShutterbugadded=true; break; }
+                                             case 'shutterbug' : {
+                                                img_src='images/ShutterBug.jpg' ; img_name='shutterbug' ;isShutterbugadded=true; break; }
+                                            case 'marathon' : {
+                                                img_src='images/Marathon.jpg' ; img_name='Marathon' ; break; }
+                                            case 'fitness' : {
+                                                img_src='images/Fitness.png' ; img_name='Fitness' ;break; }
+                                            case 'fantasy' : {
+                                                img_src='images/CricketFantasy.jpg' ;img_name='Fantasy' ; break; }
+                                            case 'treasure_hunt' : {
                                             img_src='images/Treasure.jpg' ; img_name='Treasure Hunt' ; break; }
-                                            case 'cricket_workshop' : { img_src='images/Cricketworkshop.jpg' ;
-                                            img_name='Cricketworkshop' ; break; } case 'chess' : {
-                                            img_src='images/Chess.jpeg' ; img_name='Chess' ; break; } case 'Ipl Auction'
+                                            case 'cricket_workshop' : {
+                                                 img_src='images/Cricketworkshop.jpg' ;
+                                            img_name='Cricketworkshop' ; break; }
+                                             case 'chess' : {
+                                            img_src='images/Chess.jpeg' ; img_name='Chess' ; break; }
+                                             case 'Ipl Auction'
                                             : if(isIpladded==false){ img_src='images/Ipl.png' ; img_name='IPL Auction' }
                                             break; } if(img_src !='' ){ %>
                                             <!-- <a href="/events" class="event_img">

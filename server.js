@@ -23,6 +23,7 @@ var session;
 app.use(express.static("public"));
 app.locals.stuff_event = stuff_event;
 
+
 mongoose.connect(
   process.env.MONG,
   {
