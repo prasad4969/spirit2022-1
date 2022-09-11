@@ -3,6 +3,10 @@ body {
     padding: 0;
     overflow-x: hidden;
   }
+
+  .nav-link:hover,.nav-link:active{
+    color: #8c30f5;
+  }
   ::-webkit-scrollbar {
     width: 0px;
   }
@@ -15,7 +19,6 @@ body {
   #image11 {
     height: 100%;
     width:100%
-    
   }
   .btn.btn-light {
     font-weight: 500;
