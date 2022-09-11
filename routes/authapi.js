@@ -91,10 +91,11 @@ app.post("/register", async (req, res) => {
         password,
         discord,
       });
+
       var mailOptions = {
-        from: "Spirit 2021 <spiritiitg2022@gmail.com>",
+        from: "Spirit 2022 <spiritiitg2022@gmail.com>",
         to: email,
-        subject: "Welcome to Spirit 2021. Verify your account",
+        subject: "Welcome to Spirit 2022. Verify your account",
         html: `Hi ${username},
 <br><br>
 Thanks for registering for Spirit!
@@ -205,6 +206,7 @@ app.post("/loginwithgofb", async (req, res) => {
 app.post("/registerwithgofb", async (req, res) => {
   const { email, username, provider } = req.body;
   const isVerified = false;
+  console.log("in register");
   try {
     const response = await stuff.model.create({
       username,
@@ -212,10 +214,12 @@ app.post("/registerwithgofb", async (req, res) => {
       isVerified,
       provider,
     });
+
+
     var mailOptions = {
-      from: "Spirit 2021 <spiritiitg2022@gmail.com>", // sender address (who sends)
+      from: "Spirit 2022 <spiritiitg2022@gmail.com>", // sender address (who sends)
       to: email, // list of receivers (who receives)
-      subject: "Welcome to Spirit 2021.", // Subject line
+      subject: "Welcome to Spirit 2022.", // Subject line
       html: `Hi ${username},
 <br><br>
 Thanks for registering for Spirit!
@@ -240,6 +244,8 @@ Spirit Web Operations`, // html body
     console.log("User created successfully: ");
     return res.json({ status: "ok", data: response });
   } catch (error) {
+    console.log("in already in use");
+    
     if (error.code === 11000) {
       // duplicate key
       return res.json({
@@ -283,9 +289,9 @@ app.post("/pass_forgot_req", async (req, res) => {
       //return res.json({ status: "ok", data: query.provider });
       try {
         var mailOptions1 = {
-          from: "Spirit 2021 <spiritiitg2022@gmail.com>",
+          from: "Spirit 2022 <spiritiitg2022@gmail.com>",
           to: email,
-          subject: "Reset your Spirit 2021 password",
+          subject: "Reset your Spirit 2022 password",
           html: `<b>Reset password for email: ${email}</b><br><a href="http://${req.hostname}/authapi/getnewpass/${query._id}">Click here to change your password</a>`, // html body
         };
         transporter.sendMail(mailOptions1, function (error, info) {
