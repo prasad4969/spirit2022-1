@@ -9,7 +9,7 @@ var newsDataArr=[];
 
 // const API_KEY ="3314d224194e4878ace3b0d512e1e989";
 
-const SPORTS_NEWS=("http://spiritiitg.in/newsapi")
+const SPORTS_NEWS=("https://spiritiitg.in/newsapi")
 
 window.onload=function(){
     newsType.innerHTML="";
