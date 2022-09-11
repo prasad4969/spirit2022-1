@@ -92,6 +92,7 @@ app.post("/register", async (req, res) => {
         discord,
       });
 
+
       var mailOptions = {
         from: "Spirit 2022 <spiritiitg2022@gmail.com>",
         to: email,
@@ -120,6 +121,7 @@ Spirit Web Operations`,
       return res.json({ status: "ok", data: response });
     }
   } catch (error) {
+    console.log(error.code);
     if (error.code === 11000) {
       // duplicate key passed
       return res.json({
@@ -208,13 +210,13 @@ app.post("/registerwithgofb", async (req, res) => {
   const isVerified = false;
   console.log("in register");
   try {
+
     const response = await stuff.model.create({
       username,
       email,
       isVerified,
       provider,
     });
-
 
     var mailOptions = {
       from: "Spirit 2022 <spiritiitg2022@gmail.com>", // sender address (who sends)
@@ -243,11 +245,13 @@ Spirit Web Operations`, // html body
     });
     console.log("User created successfully: ");
     return res.json({ status: "ok", data: response });
+
   } catch (error) {
     console.log("in already in use");
     
     if (error.code === 11000) {
       // duplicate key
+      console.log(error)
       return res.json({
         status: "error",
         error: "Sorry this email is already in use",
