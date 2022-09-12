@@ -1,214 +1,258 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://apis.google.com/js/platform.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://apis.google.com/js/platform.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="/css/event_reg_styles.css">
-    <title>Spirit 2022 | event</title>
-  </head>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
-  </style>
+  <link rel="stylesheet" href="/css/event_reg_styles.css">
+  <title>Spirit 2022 | event</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+</style>
 
-  <body>
-    <%- include('../navbar') -%>
+<body>
+  <%- include('../navbar') -%>
 
 
     <div class="bigContainer">
       <div class="cont">
         <div class="cont1">
-           
-          <h4 id="name-div" data-test=<%=name%>><%=name%></h4>
-          <p>
-            Got questions? Got feedback? Got suggestions? Drop us a line below
-            and we promise to get back to you!
-          </p>
-          <div class="eve_img" id="eve_img">
-          <img src="/images/event_pics/<%=name%>.png" alt="" style=" max-height: 575px; max-width: 400px;
-          width: 100%;
-height: 95% "  > 
-            
-             
-          
-          </div>
-          <!-- <div class="aboutUs">
-            <span class="icon">
-              <div class="c1">
-                <i class="fa-solid fa-envelope fa"></i>
-              </div> -->
 
-              <!-- <div class="c2">
-                <h6 class="c2_child">
-                  <a href="/Mail"> Mail </a>
-                </h6>
-                <h2 class="c2_child">Contact Us</h2>
-              </div>
-            </span>
-            <span class="icon">
-              <div class="c1">
-                <i class="fa-solid fa-phone"></i>
-              </div> -->
+          <h4 id="name-div" data-test=<%=name%>><%=name%>
+          </h4>
 
-              <!-- <div class="c2">
-                <h6 class="c2_child">
-                  <a href="/Callpage"> Phone </a>
-                </h6>
-                <h2 class="c2_child">Call Us</h2>
-              </div>
-            </span>
-            <span class="icon">
-              <div class="c1">
-                <i class="fa-solid fa-location-arrow"></i>
-              </div> -->
+          <% if((name)=="Cricket" ){ %>
+            <p>
+              People of india love cricket, dream cricket, speak cricket and breathe it too.
 
-              <!-- <div class="c2">
-                <h6 class="c2_child">
-                  <a href="/LocateUs"> Locate Us </a>
-                </h6>
-                <h2 class="c2_child">Locate Us</h2>
-              </div> -->
-            <!-- </span>
-          </div> -->
+              Join us and create a sense of discipline and team-spirit. Either hit a wicket or give a free hit. The
+              excitement is equal for both. The hearts will beat for both.
+            </p>
+            <% } else if(name=="Football" ){ %>
+              <p>
+                Play hard, Win EASY.
+                Not just a game, but a worldwide phenomenon, football is in the blood of all sportspersons in India.
+                This event is meant to bring out that Sunil Chhetri that resides in every budding footballer in the
+                country.
+              </p>
+              <% } else if(name=="Volleyball-m" || name=="Volleyball-w"){ %>
+                <p>
+                  Be Bold ! If you are going to make an error, make a doozy, and don't be afraid to hit the ball. Don’t
+                  let the ball hit the ground without a body hitting the ground with it.
+                </p>
+                <% } else if(name=="Badminton-m" || name=="Badminton-w" ){ %>
+                  <p>
+                    What we do is nothing like the portrayal of badminton as a gentle game played in a church hall.
+                    Badminton is fun and relaxing,show us that this sport is in your heart and soul and passion.
+                    Beware, our games are fast and aggressive ..
+                  </p>
+                  <% } else if(name=="Tennis-m" || name=="Tennis-w" ){ %>
+                    <p>
+                      Previous point has no meaning and next point is meaningless as well, the most meaningful is the
+                      current point. When opponent plays the stroke you are not good at, don't overthink, just hit the
+                      ball back.
+                    </p>
+                    <% } else if(name=="Aquatics-m" || name=="Aquatics-w" ){ %>
+                      <p>
+                        Got questions? Got feedback? Got suggestions? Drop us a line below
+                        and we promise to get back to you!
+                      </p>
+                      <% } else if(name=="TT-m" || name=="TT-w" ){ %>
+                        <h5>ping-pong whiff-whaff</h5>
+                        <p>
+
+                          A fast paced game made for you to improve your hand-eye coordination. Read the game, hit every
+                          ball with a purpose. Rule the table with enthusiasm and skills.
+                          Table tennis is……no words, Just the sound of ball.
+                        </p>
+                        <% } else if(name=="Athletics-m" || name=="Athletics-w" ){ %>
+                          <p>
+                            Athletics events and games are the oldest form of organized sport, having developed out of
+                            the most basic human activities, running, walking, jumping, and throwing. Do you love the
+                            trail and the pace on track? Show your stamina, speed, strength, skill, and spirit on the
+                            track.
+                          </p>
+                          <% } else if(name=="Basketball-m" || name=="Basketball-w" ){ %>
+                            <p>
+                              Got questions? Got feedback? Got suggestions? Drop us a line below
+                              and we promise to get back to you!
+                            </p>
+                            <% } else if(name=="Kho-Kho" ){ %>
+                              <p>
+                                Did you know the game has roots as old as Mahabharata?
+
+                                Kho Kho is a traditional Indian sport, being one of the oldest outdoor sports dating
+                                back to ancient India. Kho Kho helps improve mental ability, a person’s running skill,
+                                helps the person become physically fit, helps players become active, develops
+                                leadership, increases concentration level, and battles against depression.
+                              </p>
+                              <% } else if(name=="Chess" ){ %>
+                                <p>
+                                  Avoid the crowd. Do your own thinking independently. Be the chess player, not the
+                                  chess piece..When you see a good move, look for a better one. coz..
+                                  It’s always better to sacrifice your opponent’s men.
+                                </p>
+                                <% } else if(name=="Yoga-m" || name=="Yoga-w" ){ %>
+                                  <h1>Hockey</h1>
+                                  <p>
+                                    Got questions? Got feedback? Got suggestions? Drop us a line below
+                                    and we promise to get back to you!
+                                  </p>
+                                  <% } else if(name=="Weightlifting" ){ %>
+                                    <p>
+                                      Get off the treadmill of consumption, replication, and mediocrity. Begin lifting
+                                      the weights of creativity, originality, and success.The sport gives us an outlet
+                                      for suppressed energies created by stress and thus tones the spirit just as
+                                      exercise conditions the body.
+                                      Don’t be scared to lift heavy! You won’t get huge and bulky; you’ll get amazing.
+                                    </p>
+                                    <% } else if(name=="Hockey" ){ %>
+                                      <p>
+                                        In hockey, India has won the most Olympic Gold medals with a total of 8, winning
+                                        6 consecutive Gold’s between 1928-1956. Maintain the dignity of Indian hockey
+                                        and give your best in Spirit
+                                      </p>
+                                      <% } %>
+
+                                        <div class="eve_img" id="eve_img">
+                                          <img src="/images/event_pics/<%=name%>.png" alt="" style=" max-height: 575px; max-width: 400px;
+          width: 100%;height: 95% ">
+
+                                        </div>
         </div>
-        
+
         <div class="cont2">
-            <form id="event-form" method="POST" >
+          <form id="event-form" method="POST">
 
-          <div class="cardd">
-            <h6>Full Name</h6>
-             
-            <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="name"
-                     value="<%=user.username%>" class="TextBox">
-            
-          </div>
-          <div class="cardd">
-            <h6>School/College</h6>
-            <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="college"
-                     value="<%=user.collegename%>" class="TextBox">
-             
-          </div>
-          <div class="cardd">
-            <h6>Email Address</h6>
-            <input readonly required type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
-                     value="<%=user.email%>" class="TextBox">
-             
-          </div>
-          <div class="cardd">
-            <h6>Team Leader Name</h6>
-            <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="leader"
-                     value="" class="TextBox">
-            
-          </div>
-          <div class="cardd">
-            <h6>Leader Contact Number</h6>
-                     <input required type="text" name="password" style="font-size: 15px;font-weight: 400;" id="phone"
-                     value="<%=user.phno%>" class="TextBox" >
-             
-          </div>
-          <div class="cardd">
-            <h6>Team Count</h6>
-                     <input required type="number" name="password" style="font-size: 15px;font-weight: 400;" id="cnt"
-                     value="" class="TextBox">
-             
-          </div>
-          <div class="cardd">
-            
-            <h6>Campus Ambassador ID(optional)</h6>
-            <input type="text" name="password" style="font-size: 15px;font-weight: 400;" id="cmpid"
-            value="" class="TextBox">
-            
-          </div>
-          <div style="text-align: center;margin-bottom: 45px;">
-            <div class="container-fluid">
-          <input type="checkbox" id="accom" name="accom" value="accom">
-            <label style="font-size: 1.3rem;" for="accom">Do you want accomodation?</label><br>
-          </div>
-          </div>
-           <div style="text-align: center;">
-            <input type="submit" class="formSubmit" value="Register"/>
-           </div>
-          
+            <div class="cardd">
+              <h6>Full Name</h6>
 
-           <!-- <button type="button" id="button1">Login</button>
+              <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="name"
+                value="<%=user.username%>" class="TextBox">
+
+            </div>
+            <div class="cardd">
+              <h6>School/College</h6>
+              <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="college"
+                value="<%=user.collegename%>" class="TextBox">
+
+            </div>
+            <div class="cardd">
+              <h6>Email Address</h6>
+              <input readonly required type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
+                value="<%=user.email%>" class="TextBox">
+
+            </div>
+            <div class="cardd">
+              <h6>Team Leader Name</h6>
+              <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="leader" value=""
+                class="TextBox">
+
+            </div>
+            <div class="cardd">
+              <h6>Leader Contact Number</h6>
+              <input required type="text" name="password" style="font-size: 15px;font-weight: 400;" id="phone"
+                value="<%=user.phno%>" class="TextBox">
+
+            </div>
+            <div class="cardd">
+              <h6>Team Count</h6>
+              <input required type="number" name="password" style="font-size: 15px;font-weight: 400;" id="cnt" value=""
+                class="TextBox">
+
+            </div>
+            <div class="cardd">
+
+              <h6>Campus Ambassador ID(optional)</h6>
+              <input type="text" name="password" style="font-size: 15px;font-weight: 400;" id="cmpid" value=""
+                class="TextBox">
+
+            </div>
+            <div style="text-align: center;margin-bottom: 45px;">
+              <div class="container-fluid">
+                <input type="checkbox" id="accom" name="accom" value="accom">
+                <label style="font-size: calc(.8rem + 1vw);" for="accom">Do you want accomodation?</label><br>
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <input type="submit" class="formSubmit" value="Register" />
+            </div>
+
+
+            <!-- <button type="button" id="button1">Login</button>
            <button type="button" id="button2">Login with google</button>
            <br>
             
            <button type="button" id="button2"> Login with outlook</button> -->
-            </form>  
+          </form>
         </div>
-        
-        </div>
+
       </div>
     </div>
 
     <%- include('../footer') -%>
 
-    <script>
+      <script>
 
-        
+
         // var event_name= document.getElementById('name-div').dataset.name;
-        event_name="<%=name%>";
+        event_name = "<%=name%>";
         var form = document.getElementById('event-form')
-                form.addEventListener('submit', registerForm)
-                async function registerForm(event) {
-                    event.preventDefault()
-                    let id = '<%=user._id%>'					
-                    var full_name = document.getElementById('name').value
-                    var email_address = document.getElementById('mail').value
-                    var college = document.getElementById('college').value
-                    var contact_number = document.getElementById('phone').value
-                    var team_leader = document.getElementById('leader').value
-                    var team_cnt = document.getElementById('cnt').value
-				            if(document.getElementById('accom').checked)
-                    {var accom = true;}
-                    else{ var accom = false; }
-                    var amb_id = document.getElementById('cmpid').value
-                    console.log(full_name);
-                    console.log(email_address);
-                    console.log(college);
-                    console.log(contact_number);
-                    console.log(team_cnt);
-                    console.log(team_leader);
-                    console.log(accom);
-                    console.log(amb_id);
-                    var result = await fetch(`/events/event_registration/post/${event_name}/${id}`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            full_name,event_name,email_address,college,contact_number,amb_id,team_leader,team_cnt,accom
-                        })
-                    }).then((res) => res.json())
-    
-                    if (result.status === 'ok') {
-                      window.location.replace(`/events/event_registration/success`);
-                        alert('Success')
-                    } else {
-				              window.location.replace(`/`);
-                        alert(result.error)
-                    }
-            }
+        form.addEventListener('submit', registerForm)
+        async function registerForm(event) {
+          event.preventDefault()
+          let id = '<%=user._id%>'
+          var full_name = document.getElementById('name').value
+          var email_address = document.getElementById('mail').value
+          var college = document.getElementById('college').value
+          var contact_number = document.getElementById('phone').value
+          var team_leader = document.getElementById('leader').value
+          var team_cnt = document.getElementById('cnt').value
+          if (document.getElementById('accom').checked) { var accom = true; }
+          else { var accom = false; }
+          var amb_id = document.getElementById('cmpid').value
+          console.log(full_name);
+          console.log(email_address);
+          console.log(college);
+          console.log(contact_number);
+          console.log(team_cnt);
+          console.log(team_leader);
+          console.log(accom);
+          console.log(amb_id);
+          var result = await fetch(`/events/event_registration/post/${event_name}/${id}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              full_name, event_name, email_address, college, contact_number, amb_id, team_leader, team_cnt, accom
+            })
+          }).then((res) => res.json())
+
+          if (result.status === 'ok') {
+            window.location.replace(`/events/event_registration/success`);
+            alert('Success')
+          } else {
+            window.location.replace(`/`);
+            alert(result.error)
+          }
+        }
       </script>
-  </body>
-  
+</body>
+
 </html>

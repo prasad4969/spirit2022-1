@@ -415,7 +415,7 @@ app.post("/ca_register", async (req, res) => {
     if(user1.isCampusAmb == true){
       return res.json({
         status: "error",
-        error: `You are aleady a campus ambassador`,
+        error: `You are aleady a campus ambassador! You can view your campus ambassador ID in your Profile.`,
       });
     }
     if(user1.isVerified == false){
