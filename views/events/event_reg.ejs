@@ -108,22 +108,21 @@ height: 95% "  >
           </div>
           <div class="cardd">
             <h6>Email Address</h6>
-            <input required type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
+            <input readonly required type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
                      value="<%=user.email%>" class="TextBox">
              
           </div>
           <div class="cardd">
-            <h6>Contact Number</h6>
-                     <input required type="text" name="password" style="font-size: 15px;font-weight: 400;" id="phone"
-                     value="<%=user.phno%>" class="TextBox" >
-             
-          </div>
-          <div class="cardd">
             <h6>Team Leader Name</h6>
-             
             <input required type="text" name="email" style="font-size: 15px;font-weight: 400;" id="leader"
                      value="" class="TextBox">
             
+          </div>
+          <div class="cardd">
+            <h6>Leader Contact Number</h6>
+                     <input required type="text" name="password" style="font-size: 15px;font-weight: 400;" id="phone"
+                     value="<%=user.phno%>" class="TextBox" >
+             
           </div>
           <div class="cardd">
             <h6>Team Count</h6>
@@ -131,16 +130,18 @@ height: 95% "  >
                      value="" class="TextBox">
              
           </div>
-          <div style="text-align: center;">
-          <input type="checkbox" id="accom" name="accom" value="accom">
-            <label for="accom">Do you want accomodation?</label><br>
-          </div>
           <div class="cardd">
-
+            
             <h6>Campus Ambassador ID(optional)</h6>
-                     <input type="text" name="password" style="font-size: 15px;font-weight: 400;" id="cmpid"
-                     value="" class="TextBox">
-             
+            <input type="text" name="password" style="font-size: 15px;font-weight: 400;" id="cmpid"
+            value="" class="TextBox">
+            
+          </div>
+          <div style="text-align: center;margin-bottom: 45px;">
+            <div class="container-fluid">
+          <input type="checkbox" id="accom" name="accom" value="accom">
+            <label style="font-size: 1.3rem;" for="accom">Do you want accomodation?</label><br>
+          </div>
           </div>
            <div style="text-align: center;">
             <input type="submit" class="formSubmit" value="Register"/>
