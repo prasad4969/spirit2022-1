@@ -10,6 +10,14 @@ body {
   ::-webkit-scrollbar {
     width: 0px;
   }
+
+
+  .carousel .carousel-indicators button {
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+  }
+
   .jojo{
     height: 100%;
     position: relative;
@@ -523,7 +531,7 @@ body {
       color:#C67DFF;
     } */
   a:hover {
-    color: lightgreen;
+    color: rgb(0, 0, 0);
   }
   .mat {
     text-decoration: none;
@@ -607,7 +615,7 @@ body {
     width: 70%;
     padding: auto;
   }
-  .active,
+  .faq-active,
   .faq-page:hover {
     background-color: #f9f9f9;
   }
@@ -628,7 +636,7 @@ body {
   
     /* margin-left: 50%; */
   }
-  .active:after {
+  .faq-active:after {
     content: "\2716";
     font-size: 13px;
     color: #101d35;

@@ -7,9 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 .abt-background{
   height: 100%;
-  width: 100vw;
   background-color: #11002C;
   overflow-x: hidden; 
  
