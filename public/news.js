@@ -72,11 +72,18 @@ function displayNews(){
 
         var dateHeading=document.createElement('p');
         dateHeading.className="text-secondary date";//* */
+        if(date[0]){
         dateHeading.innerHTML=date[0];
+        }else{
+            dateHeading.innerHTML="date";
+        }
 
         var discription=document.createElement('p');
         discription.className="text-dark card-text";//** */
-        discription.innerHTML=news.description.substring(0, 120);  
+        if(news.description){
+        discription.innerHTML=news.description.substring(0, 120);}else{
+            discription.innerHTML="The latest trending news in the world of sports!";
+        }
 
         card_body.appendChild(dateHeading);
         card_body.appendChild(discription);
