@@ -26,7 +26,7 @@ app.locals.stuff_event = stuff_event;
 
 
 mongoose.connect(
-  "mongodb+srv://avi1107:Vl6X7dH2pMl3WTAA@cluster0.vggl8wb.mongodb.net/test?retryWrites=true&w=majority",
+  process.env.MONG,
   // "mongodb+srv://spirit2021:yH7HfOYsISfl1JKz@cluster0.g6tea.mongodb.net/mySecondDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
