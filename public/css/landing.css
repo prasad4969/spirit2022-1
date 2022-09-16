@@ -1,3 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/masked-hero-demo');
+@import url('https://fonts.cdnfonts.com/css/palanquin');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -143,6 +147,23 @@ body {
     line-height: 32px;
     padding-right: 11%;
   }
+
+.spirit-dates{
+  font-size: calc(.7rem + 1vw);
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  color: white;  
+  font-family: 'Masked Hero Demo' ;
+}
+
+@media (max-width:700px){
+  .spirit-dates{
+    font-size: calc(.7rem + .7vw);
+    top: 1%;
+    left: 10%;
+  }
+}
   /* <--meghna--> */
   
   .stats{
