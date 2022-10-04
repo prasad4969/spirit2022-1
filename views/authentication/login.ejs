@@ -521,6 +521,7 @@
             </div> -->
           </div>
           <a style="font-size:calc(.60rem + .8vw)" href="register" class="myanchortag">Dont have an account? Create one here</a>
+          <a class="login-rf-f"  id="forgot" style="text-decoration:none;">Forgot Password?</a>
            <!-- <button type="button" id="button1">Login</button>
            <button type="button" id="button2">Login with google</button>
            <br>
@@ -659,35 +660,35 @@
 
           startApp()
 
-  //         const forgot1 = document.getElementById('forgot')
-  //     forgot1.addEventListener("click",forgotReqPass)
+          const forgot1 = document.getElementById('forgot')
+      forgot1.addEventListener("click",forgotReqPass)
 
-  //         async function forgotReqPass(event){
-  //   event.preventDefault()
-  //   const email = document.getElementById('Emailenter').value
-  //   if(!email){
-  //     document.getElementById("errors").innerHTML="Enter your email address in the form"
-  //   }
-  //   else{
-  //   console.log(email)
-  //   const result = await fetch('/authapi/pass_forgot_req', {
-  //             method: 'POST',
-  //             headers: {
-  //                 'Content-Type': 'application/json'
-  //             },
-  //             body: JSON.stringify({
-  //                 email
-  //             })
-  //         }).then((res) => res.json())
+          async function forgotReqPass(event){
+    event.preventDefault()
+    const email = document.getElementById('mail').value
+    if(!email){
+      document.getElementById("errors").innerHTML="Enter your email address in the form"
+    }
+    else{
+    console.log(email)
+    const result = await fetch('/authapi/pass_forgot_req', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  email
+              })
+          }).then((res) => res.json())
     
-  //   if (result.status === 'ok') {
-  //             document.getElementById("errors").innerHTML='Please check your email for the link to reset your password'
-  //     // console.log(result.data)
+    if (result.status === 'ok') {
+              document.getElementById("errors").innerHTML='Please check your email for the link to reset your password'
+      // console.log(result.data)
               
-  //         } else {
-  //              document.getElementById("errors").innerHTML=result.data
-  //         }
-  //   }
-  // }
+          } else {
+               document.getElementById("errors").innerHTML=result.data
+          }
+    }
+  }
       </script>
 </html>
