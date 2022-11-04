@@ -7,20 +7,6 @@
 MongoDB, Expressjs, React, Nodejs
 </p>
 
-<!-- <p align="center">
-   <a href="https://travis-ci.com/amazingandyyy/mern">
-      <img src="https://travis-ci.com/amazingandyyy/mern.svg?branch=master" />
-   </a>
-   <a href="https://github.com/amazingandyyy/mern/blob/master/LICENSE">
-      <img src="https://img.shields.io/badge/License-MIT-green.svg" />
-   </a>
-   <a href="https://circleci.com/gh/amazingandyyy/mern">
-      <img src="https://circleci.com/gh/amazingandyyy/mern.svg?style=svg" />
-   </a>
-</p>
- -->
-<!-- > MERN is a fullstack implementation in MongoDB, Expressjs, React/Redux, Nodejs. -->
-
 Website developed in MERN stack for Spirit, the biggest collegiate sporting festival of North Eastern India with 3K+ participants from 65+ colleges hosted by IIT Guwahati
 
 ## clone or download
@@ -54,32 +40,21 @@ $ npm run build   // this will build the server code to es5 js codes and generat
 
 ### Landing Page
 
-![image](https://user-images.githubusercontent.com/66035321/139844812-9b3b432b-e8a5-4a9e-a566-0d9bef194bd8.png)
-
-### Dynamic Display in Landing Page
-
-![Untitled](https://user-images.githubusercontent.com/66035321/139845569-77777330-4c75-46af-a772-7542268b87f8.gif)
+![image](https://user-images.githubusercontent.com/107197338/199993939-069a41f1-ff62-4cf9-bbce-1f02acaa711a.png)
 
 ### Login Page
 
-![image](https://user-images.githubusercontent.com/66035321/139845785-da6f3f06-e955-43d5-b6e2-2d39e5de371d.png)
+![Frame 48095546](https://user-images.githubusercontent.com/107197338/199995100-c8ff56cc-82b5-43b3-b007-edc8e2d27938.png)
 
 ### Event Page
 
-![image](https://user-images.githubusercontent.com/66035321/139845996-2c8def3f-99e1-4c28-ae13-5cd35b5d14f3.png)
+![image](https://user-images.githubusercontent.com/107197338/199995507-dac1b63d-daee-4036-9d1e-ac2737ca7df4.png)
 
-### Hover Effects for Event Cards
+   
+### FAQ Page
 
-![Untitled (1)](https://user-images.githubusercontent.com/66035321/139846518-0b6c3bcf-dfbd-4fc1-9bd3-d15427fd1c16.gif)
+![image](https://user-images.githubusercontent.com/107197338/199995964-e5f43d6c-f64f-4c32-b7a8-690b693cac83.png)
 
-### Sponsors Page
+### Sponsers
 
-![image](https://user-images.githubusercontent.com/66035321/139846656-7932f9fb-2472-458e-a143-0261ca38d917.png)
-
-### About Us Page
-
-![image](https://user-images.githubusercontent.com/66035321/139846723-4634e331-9060-4060-9ff6-637ce62650ef.png)
-
-### Restricted Pages of the website redirects to login page if the user is not logged in
-
-![image](https://user-images.githubusercontent.com/66035321/139846846-3b662bc5-201f-43b1-9289-1cc8b35397f4.png)
+![image](https://user-images.githubusercontent.com/107197338/199996162-05aae3bb-40c4-43fb-a1ab-595bd450216e.png)
