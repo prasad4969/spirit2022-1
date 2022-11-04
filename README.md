@@ -12,16 +12,15 @@ Website developed in MERN stack for Spirit, the biggest collegiate sporting fest
 ## clone or download
 
 ```terminal
-$ git clone https://github.com/Nikitha2309/spirit2021.git
+$ git clone https://github.com/letsdiffrenciate/spirit2022-1
 $ npm i
 ```
 
 ### Start
 
 ```terminal
-$ cd spirit2021   // go to server folder
+$ cd spirit2022-1   // go to server folder
 $ npm i           // npm install packages
-$ npm run dev     // run it locally
 $ npm run build   // this will build the server code to es5 js codes and generate a dist file
 ```
 
