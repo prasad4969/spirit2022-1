@@ -4,12 +4,12 @@
    <a href="http://spirit2021.herokuapp.com/">Spirit 2021</a>
 </h1>
 <p align="center">
-MongoDB, Expressjs, React, Nodejs
+MongoDB, Express js, React, Nodejs
 </p>
 
-Website developed in MERN stack for Spirit, the biggest collegiate sporting festival of North Eastern India with 3K+ participants from 65+ colleges hosted by IIT Guwahati
+Website developed in MERN stack for Spirit, the most prominent collegiate sporting festival of North Eastern India with 3K+ participants from 65+ colleges hosted by IIT Guwahati
 
-## clone or download
+## Clone or download
 
 ```terminal
 $ git clone https://github.com/letsdiffrenciate/spirit2022-1
@@ -21,16 +21,16 @@ $ npm i
 ```terminal
 $ cd spirit2022-1   // go to server folder
 $ npm i           // npm install packages
-$ npm run build   // this will build the server code to es5 js codes and generate a dist file
+$ npm run build   //This will build the server code to es5 js codes and generate a dist file
 ```
 
 ## Features
 
 - Authentication
   - Integrated Google Sign-in Feature
-  - Sign-in with email & password
+  - Sign in with email & password
 - New Announcements Display
-- Showcase of all information about Spirit and related statistics
+- Showcase all information about Spirit and related statistics
 - Updates about ongoing & upcoming events
 - Register Feature for every event
 - Footer with quick links and contact details
@@ -39,7 +39,7 @@ $ npm run build   // this will build the server code to es5 js codes and generat
 
 ### Landing Page
 
-![image](https://user-images.githubusercontent.com/107197338/199993939-069a41f1-ff62-4cf9-bbce-1f02acaa711a.png)
+![Screenshot (127)](https://github.com/letsdifferentiate/spirit2022-1/assets/107197338/2ed80e18-3666-41aa-88a9-3e3eb26c0ddb)
 
 ### Login Page
 
@@ -47,13 +47,16 @@ $ npm run build   // this will build the server code to es5 js codes and generat
 
 ### Event Page
 
-![image](https://user-images.githubusercontent.com/107197338/199995507-dac1b63d-daee-4036-9d1e-ac2737ca7df4.png)
+![image](https://github.com/letsdifferentiate/spirit2022-1/assets/107197338/142f6dc6-eefc-4de3-9da8-b8c863339f23)
 
-   
+### Happening in Sports
+
+![image](https://github.com/letsdifferentiate/spirit2022-1/assets/107197338/cbe31574-ad93-4a2a-b5b1-b85ce0466415)
+ 
 ### FAQ Page
 
 ![image](https://user-images.githubusercontent.com/107197338/199995964-e5f43d6c-f64f-4c32-b7a8-690b693cac83.png)
 
-### Sponsers
+### Sponsors
 
-![image](https://user-images.githubusercontent.com/107197338/199996162-05aae3bb-40c4-43fb-a1ab-595bd450216e.png)
+![image](https://github.com/letsdifferentiate/spirit2022-1/assets/107197338/912d9a31-f492-4262-902d-7cec13b02937)
