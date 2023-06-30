@@ -1,7 +1,7 @@
 <h1>Spirit 2022</h1>
 
 <h1 align="center">
-   <a href="http://spirit2021.herokuapp.com/">Spirit 2021</a>
+   <a href="http://spirit2021.herokuapp.com/">Spirit 2022</a>
 </h1>
 <p align="center">
 MongoDB, Express js, React, Nodejs
